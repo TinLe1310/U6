@@ -1,0 +1,11 @@
+<div class="tabs is-centered">
+  <ul>
+    <li><%= link_to "Index", customers_path, style: "text-decoration: none;" %></li>
+    <li><%= link_to "Missing Email", missing_email_customers_path, style: "text-decoration: none;" %></li>
+    <li class="is-active"><%= link_to "Alphabetized", alphabetized_customers_path, style: "text-decoration: none;" %></li>
+  </ul>
+</div>
+
+<% @customers.each do |customer| %>
+  <%= render partial: 'customer', locals: { customer: customer } %>
+<% end %>

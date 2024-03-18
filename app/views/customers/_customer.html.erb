@@ -1,0 +1,28 @@
+<div class="columns">
+  <div class="column is-one-quarter" >
+    <div class="card">
+      <div class="card-image">
+        <figure class="image">
+          <%= image_tag customer.image %>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-three-quarters">
+    <article class="message is-dark">
+      <div class="message-header">
+        <p><%= customer.fullname %></p>
+      </div>
+      <div class="message-body">
+        <p><%= customer.phone %></p>
+      </div>
+      <div class="message-body">
+        <p>Email: <%= customer.email %></p>
+      </div>
+      <div class="message-body">
+        <p>Notes: <%= customer.notes %></p>
+      </div>
+    </article>
+  </div>
+</div>
