@@ -1,0 +1,15 @@
+<div class="box">
+  <div class="media">
+    <div class="media-left">
+      <%= image_tag customer.avatar.variant(resize: "100x100"), class: "image is-64x64" if customer.avatar.attached? %>
+    </div>
+    <div class="media-content">
+      <p class="title is-4"><%= customer.full_name %></p>
+      <p class="subtitle is-6"><%= customer.phone_number %></p>
+      <p class="subtitle is-6"><%= customer.email %></p>
+      <div class="content">
+        <%= simple_format(customer.notes) %>
+      </div>
+    </div>
+  </div>
+</div>
